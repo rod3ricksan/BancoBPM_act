@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import java.nio.channels.InterruptedByTimeoutException;
+
+import dalvik.system.InMemoryDexClassLoader;
+
 public class Home_act extends AppCompatActivity {
 
     private ViewFlipper vf;
@@ -39,7 +43,18 @@ public class Home_act extends AppCompatActivity {
     }
     public void Seguridad(View v)
     {
-        Intent i = new Intent(this, Clientes_act.class);
+        Intent i = new Intent(this, Seguridad_act.class);
         startActivity(i);
+    }
+    public void Info(View v)
+    {
+      Intent i = new Intent(this,Info_act.class);
+      startActivity(i);
+    }
+    public  void Clientes(View v)
+    {
+        Intent i = new Intent(this,Clientes_act.class);
+        startActivity(i);
+
     }
 }
