@@ -10,7 +10,8 @@ import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.security.PrivateKey;
-import java.util.Base64;
+import android.util.Base64;
+
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -52,8 +53,7 @@ public class Seguridad_act extends AppCompatActivity {
            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
 
            byte[] datosEncriptadosBytes = cipher.doFinal(datos.getBytes());
-           String datosEncriptadosString = Base64.encodeToString
-                   (datosEncriptadosBytes, Base64.DEFAULT);
+           String datosEncriptadosString = Base64.encodeToString(datosEncriptadosBytes, Base64.DEFAULT);
 
            return datosEncriptadosString;
        }

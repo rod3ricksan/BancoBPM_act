@@ -1,0 +1,27 @@
+Index: app/src/main/java/com/example/bancobpm_act/Seguridad_act.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/bancobpm_act/Seguridad_act.java	(revision 36953aa85bd2029ab0911a9f7416d14d3d378e5e)
++++ app/src/main/java/com/example/bancobpm_act/Seguridad_act.java	(date 1604422385512)
+@@ -10,7 +10,8 @@
+ 
+ import java.security.MessageDigest;
+ import java.security.PrivateKey;
+-import java.util.Base64;
++import android.util.Base64;
++
+ 
+ import javax.crypto.Cipher;
+ import javax.crypto.SecretKey;
+@@ -52,8 +53,7 @@
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+ 
+            byte[] datosEncriptadosBytes = cipher.doFinal(datos.getBytes());
+-           String datosEncriptadosString = Base64.encodeToString
+-                   (datosEncriptadosBytes, Base64.DEFAULT);
++           String datosEncriptadosString = Base64.encodeToString(datosEncriptadosBytes, Base64.DEFAULT);
+ 
+            return datosEncriptadosString;
+        }
