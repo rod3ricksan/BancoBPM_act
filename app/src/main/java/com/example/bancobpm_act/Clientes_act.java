@@ -14,16 +14,16 @@ import clases.AdminSQLiteOpenHelper;
 
 public class Clientes_act extends AppCompatActivity {
 
-    private EditText et1,et2,et3;
+    private EditText codigo2,nombre,salario  ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clientes_act);
 
-        et1 = (EditText) findViewById(R.id.et_Codigo);
-        et2 = (EditText) findViewById(R.id.et_Nombre);
-        et3 = (EditText) findViewById(R.id.et_Salario);
+        codigo2 = (EditText) findViewById(R.id.et_Codigo);
+        nombre = (EditText) findViewById(R.id.et_Nombre);
+        salario = (EditText) findViewById(R.id.et_Salario);
     }
 
     public void Añadir(View v) {
@@ -31,16 +31,16 @@ public class Clientes_act extends AppCompatActivity {
         };
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
-        if (!et1.getText().toString().isEmpty()) {
+        if (!codigo2.getText().toString().isEmpty()) {
             ContentValues prestamos = new ContentValues();
-            prestamos.put("Codigo", et1.getText().toString());
-            prestamos.put("Nombre", et2.getText().toString());
-            prestamos.put("Salario", et3.getText().toString());
+            prestamos.put("Codigo", codigo2.getText().toString());
+            prestamos.put("Nombre", nombre.getText().toString());
+            prestamos.put("Salario", salario.getText().toString());
 
-            BaseDeDatos.insert("Componentes", null, prestamos);
+            BaseDeDatos.insert("Prestamos", null, prestamos);
             BaseDeDatos.close();
 
-            Toast.makeText(this, "Se Ha Guardado El Componente", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Se Ha Guardado El Usuario", Toast.LENGTH_LONG).show();
 
 
         } else {
@@ -53,27 +53,27 @@ public class Clientes_act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Fichero", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
-        String codigo = et1.getText().toString();
+        String codigo = codigo2.getText().toString();
 
         if(!codigo.isEmpty())
         {
-            Cursor fila = db.rawQuery( "SELECT nombre,precio ,stock FROM componente WHERE codigo="+ codigo,null);
+            Cursor fila = db.rawQuery( "SELECT Nombre,Salario FROM Prestamos WHERE Codigo="+ codigo,null);
 
             if(fila.moveToFirst())
             {
-                et2.setText(fila.getString(0));
-                et3.setText(fila.getString(1));
+                nombre.setText(fila.getString(0));
+                salario.setText(fila.getString(1));
 
             }
             else
             {
-                Toast.makeText(this, "No Hay Ningun Campo En Componentes", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "No Hay Ningun Campo En Usuarios", Toast.LENGTH_LONG).show();
             }
 
         }
         else
         {
-            Toast.makeText(this, "No Hay Ningun Campo En Componentes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No Hay Ningun Campo En Usuarios", Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -82,12 +82,12 @@ public class Clientes_act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Fichero", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
-        String codigo = et1.getText().toString();
+        String codigo = codigo2.getText().toString();
 
-        db.delete("Componente", "Codigo="+codigo, null);
+        db.delete("Prestamos", "Codigo="+codigo, null);
         db.close();
 
-        Toast.makeText(this, "Eliminaste Un Componente", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Eliminaste Un Usuario", Toast.LENGTH_SHORT).show();
 
     }
     public void Actualizar(View v)
@@ -96,20 +96,20 @@ public class Clientes_act extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Fichero", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
-        String codigo = et1.getText().toString();
+        String codigo = codigo2.getText().toString();
 
         ContentValues cont = new ContentValues();
 
-        cont.put("codigo", et1.getText().toString());
-        cont.put("nombre", et2.getText().toString());
-        cont.put("Salario", et3.getText().toString());
+        cont.put("codigo", codigo2.getText().toString());
+        cont.put("nombre", nombre.getText().toString());
+        cont.put("Salario", salario.getText().toString());
 
 
 
         if(!codigo.isEmpty())
         {
 
-            db.update("Componente", cont, "Codigo="+codigo, null);
+            db.update("Prestamos", cont, "Codigo="+codigo, null);
             db.close();
 
             Toast.makeText(this, "Se Ha Actualizado Con Exito!", Toast.LENGTH_LONG).show();

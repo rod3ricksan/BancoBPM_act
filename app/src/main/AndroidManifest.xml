@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Info_act"></activity>
+        <activity android:name=".Prestamos_act"></activity>
+        <activity android:name=".Info_act" />
         <activity android:name=".Seguridad_act" />
         <activity android:name=".Clientes_act" />
         <!--

@@ -44,19 +44,21 @@
             android:id="@+id/btn_Acliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Eliminar"
+            android:onClick="Actualizar"
             android:text="Actualizar Cliente" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="317dp"
-        android:layout_height="135dp"
+        android:layout_width="324dp"
+        android:layout_height="141dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441">
 
         <EditText
             android:id="@+id/et_Codigo"
@@ -65,8 +67,8 @@
             android:ems="10"
             android:hint="Ingrese Codigo"
             android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textColorHint="@color/common_google_signin_btn_text_light_default" />
 
         <EditText
             android:id="@+id/et_Nombre"
@@ -75,8 +77,8 @@
             android:ems="10"
             android:hint="Ingrese Nombre"
             android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textColorHint="@color/common_google_signin_btn_text_light_default" />
 
         <EditText
             android:id="@+id/et_Salario"
@@ -85,8 +87,8 @@
             android:ems="10"
             android:hint="Ingrese Salario"
             android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textColorHint="@color/common_google_signin_btn_text_light_default" />
 
     </LinearLayout>
 

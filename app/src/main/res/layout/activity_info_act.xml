@@ -4,7 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgs"
+    android:onClick="Mapas"
     tools:context=".Info_act">
+
+    <VideoView
+        android:id="@+id/vd"
+        android:layout_width="329dp"
+        android:layout_height="312dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="366dp"
+        android:layout_height="314dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="332dp"
+                android:layout_height="170dp"
+                android:text="Bienvenido a Banco BPM donde podras manejar tus finanzas y solicitar los prestamos de nuestro banco, ofrecemos los mejores beneficios para nuestros clientes. No esperes mas y se parte de uno de los banco mas grandes a nivel latinoamerica y comienza a ganar con nosotros y cumplir tus sueños."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.111" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="60dp"
+                android:layout_height="57dp"
+                android:background="@android:color/transparent"
+                android:onClick="Mapas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.885"
+                app:srcCompat="@drawable/logozona" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
