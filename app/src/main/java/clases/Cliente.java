@@ -3,7 +3,8 @@ package clases;
 public class Cliente {
     private int Axel;
     private int Roxana;
-
+    private int Betzabe;
+    private int Matias;
 
 
     public Cliente()
