@@ -37,6 +37,7 @@
                 android:layout_width="332dp"
                 android:layout_height="170dp"
                 android:text="Bienvenido a Banco BPM donde podras manejar tus finanzas y solicitar los prestamos de nuestro banco, ofrecemos los mejores beneficios para nuestros clientes. No esperes mas y se parte de uno de los banco mas grandes a nivel latinoamerica y comienza a ganar con nosotros y cumplir tus sueños."
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.47"

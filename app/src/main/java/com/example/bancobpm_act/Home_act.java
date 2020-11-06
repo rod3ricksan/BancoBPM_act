@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 import java.nio.channels.InterruptedByTimeoutException;
+import java.util.ArrayList;
 
 import dalvik.system.InMemoryDexClassLoader;
 
@@ -55,6 +56,22 @@ public class Home_act extends AppCompatActivity {
     {
         Intent i = new Intent(this,Clientes_act.class);
         startActivity(i);
+    }
+    public void Prestamos(View v)
+    {
+        ArrayList<String> Clientes = new ArrayList<>();
+        ArrayList<String> Credito = new ArrayList<>();
 
+        Clientes.add("Axel");
+        Clientes.add("Roxana");
+
+        Credito.add("Credito Hipotecario");
+        Credito.add("Credito Automotriz");
+
+
+        Intent i = new Intent(this,Prestamos_act.class);
+        i.putExtra("listaClientes",Clientes);
+        i.putExtra("listaCredito",Credito);
+        startActivity(i);
     }
 }

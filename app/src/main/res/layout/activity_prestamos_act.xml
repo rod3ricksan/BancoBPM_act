@@ -20,8 +20,8 @@
 
     <Spinner
         android:id="@+id/spnNombre"
-        android:layout_width="356dp"
-        android:layout_height="30dp"
+        android:layout_width="309dp"
+        android:layout_height="45dp"
         android:layout_marginTop="68dp"
         app:layout_constraintBottom_toTopOf="@+id/spnCredito"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +30,8 @@
 
     <Spinner
         android:id="@+id/spnCredito"
-        android:layout_width="356dp"
-        android:layout_height="30dp"
+        android:layout_width="310dp"
+        android:layout_height="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +46,14 @@
         android:layout_marginEnd="192dp"
         android:layout_marginRight="192dp"
         android:layout_marginBottom="20dp"
+        android:onClick="Prestamo"
         android:text="Calcular Prestamos"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintEnd_toEndOf="@+id/tv5"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnCredito"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.991" />
 
     <Button
         android:id="@+id/button2"
@@ -62,23 +63,25 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="287dp"
         android:layout_marginRight="287dp"
+        android:onClick="Deudas"
         android:text="Calcular Deudas"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/tv5"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.923" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv5"
         android:layout_width="162dp"
         android:layout_height="218dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnCredito"
         app:layout_constraintVertical_bias="1.0" />
